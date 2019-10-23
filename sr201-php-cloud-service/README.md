@@ -56,26 +56,6 @@ Alternatively index2.php can be used with form2.css instead of index.php and for
 ```
 "POST /SyncServiceImpl.svc/ReportStatus HTTP/1.1" 200 157 "-" "SR-201W/M96Y"
 ```
-
-## Test Cloud Service
-The sample code is hosted on a free hosting site and accessible at the following URL:
-<http://sr201.000webhostapp.com>
-
-To configure your device to use this sample service, all you need to do is to send the following strings to the config TCP port (5111) to set the server:
-  ```
-  #91111,sr201.000webhostapp.com;
-  ```
-  then enable the cloud service:
-  ```
-  #A1111,1;
-  ```
-  and save the changes:
-  ```
-  #71111;
-  ```
-  
-  See <https://github.com/cryxli/sr201/wiki/Config-commands> for more details.
-
 ## Disclaimer
 
 Both the sample php code and the hosted service is for demonstration purposes only, provided as it is without any support whatsoever. Use the service on your own risk.
