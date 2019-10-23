@@ -41,6 +41,7 @@ This repo contains the following modules:
 * sr201-config-client - Client to read and change the config of the board.
 * sr201-client - Simple client with 8 toggle buttons to change the state of the relays.
 * sr201-server - REST interface to change the state of the relays.
+* sr201-php-cloud-service - Example implementation of a cloud service back-end in PHP provided by [hobpet](https://github.com/hobpet) following the findings of [anakhaema](https://github.com/anakhaema).
  
 Maven will create an executable JAR in each of the modules target directories.
 
@@ -49,5 +50,14 @@ Maven will create an executable JAR in each of the modules target directories.
 In addition to my Java code examples that are clearly intended as a replacement for the default VB and Delphi programs, I added a scripts directory that contains simpler more pragmatic approaches to the SR-201 communication scheme.
 
 * perl-config-script - A PERL script to manipulate the board's configuration by Christian DEGUEST.
+* python-config-script - A python script to manipulate the board's configuration.
 
 Many thanks to anyone who contributed to this knowledge base!
+
+## Own Scripts
+
+If you want to quickly setup your SR-201 without even starting a script or anything else, just check the protocol [Config commands](https://github.com/cryxli/sr201/wiki/Config-commands) and e.g. send a command via netcat:
+
+    printf "#11111;" | nc [yourip] 5111
+
+Note: It is crucial to use printf here, as newlines are seen as errors. It drove me crazy to find out about this one.
